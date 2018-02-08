@@ -38,6 +38,7 @@ public class MyIntentService extends IntentService {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
             builder.setSmallIcon(R.mipmap.ic_launcher)
                     .setContentTitle("Service finished")
+                    .setAutoCancel(true)
                     .setContentIntent(pendingIntent);
             NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.notify(0, builder.build());
